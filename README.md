@@ -99,3 +99,50 @@ Introduction
     import Footer from './Footer';
     ```
 
+## Spacing
+
+  - Always include a single space in your self-closing tag. eslint: [`no-multi-spaces`](https://eslint.org/docs/rules/no-multi-spaces), [`react/jsx-tag-spacing`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md)
+
+    ```jsx
+    // bad
+    <Foo/>
+
+    // very bad
+    <Foo                 />
+
+    // bad
+    <Foo
+     />
+
+    // good
+    <Foo />
+    ```
+
+  - Do not pad JSX curly braces with spaces. eslint: [`react/jsx-curly-spacing`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md)
+
+    ```jsx
+    // bad
+    <Foo bar={ baz } />
+
+    // good
+    <Foo bar={baz} />
+    ```
+
+## Props
+
+  - Always use camelCase for prop names, or PascalCase if the prop value is a React component.
+
+    ```jsx
+    // bad
+    <Foo
+      UserName="hello"
+      phone_number={12345678}
+    />
+
+    // good
+    <Foo
+      userName="hello"
+      phoneNumber={12345678}
+      Component={SomeComponent}
+    />
+    ```
